@@ -1,0 +1,13 @@
+point:
+  max-credit-per-once: 100000   # 1회 최대 적립 한도
+  max-balance-per-user: 500000  # 개인별 최대 보유 한도
+  default-expire-days: 365      # 기본 만료일 (일 단위)
+
+spring:
+  h2:
+    console:
+      enabled: true
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
