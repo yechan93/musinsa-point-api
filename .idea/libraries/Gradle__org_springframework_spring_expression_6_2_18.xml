@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: org.springframework:spring-expression:6.2.18" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.springframework" artifactId="spring-expression" version="6.2.18" baseVersion="6.2.18" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-expression/6.2.18/ab31ebbfb6ff1ef89b0ed92c289285c9f79658f3/spring-expression-6.2.18.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-expression/6.2.18/543aef5ea2278ac338ff774d7e281e4815bdf7fa/spring-expression-6.2.18-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
