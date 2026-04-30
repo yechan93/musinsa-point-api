@@ -120,6 +120,7 @@ public class PointDebitService {
 
             if (credit.isExpired()) {
                 // 만료된 적립건 → 복구 대신 신규 적립 처리
+                // 복구 개념의 신규 적립은 최대 포인트 보유 한도 체크 예외로 가정함
                 LocalDate newExpiredAt = LocalDate.now().plusDays(policyConfig.getDefaultExpireDays());
                 PointCredit newCredit = PointCredit.create(
                         debit.getUserId(), restoreAmount, false, newExpiredAt);

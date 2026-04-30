@@ -13,11 +13,15 @@ import java.util.List;
 public interface PointDebitDetailRepository extends JpaRepository<PointDebitDetail, Long> {
 
     // 사용취소 시 어느 적립건에서 얼마나 썼는지 역추적
-    // JOIN FETCH 로 pointCredit 을 한 번에 조회해 N+1 방지
+    // 수기지급 우선 → 만료일 오름차순 → id 오름차순
+    // 사용 시 차감 순서(findDebitTargets)와 동일하게 맞춰 복구 순서를 보장
     @Query("""
-            SELECT pdd FROM PointDebitDetail pdd
-            JOIN FETCH pdd.pointCredit
-            WHERE pdd.pointDebit.id = :pointDebitId
-            """)
+        SELECT pdd FROM PointDebitDetail pdd
+        JOIN FETCH pdd.pointCredit
+        WHERE pdd.pointDebit.id = :pointDebitId
+        ORDER BY pdd.pointCredit.isManual DESC,
+                 pdd.pointCredit.expiredAt ASC,
+                 pdd.id ASC
+        """)
     List<PointDebitDetail> findWithCreditByPointDebitId(@Param("pointDebitId") Long pointDebitId);
 }

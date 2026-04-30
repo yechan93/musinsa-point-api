@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50d195e4-1391-4de8-bc22-f29d32371d5b" name="변경" comment="">
+    <list default="true" id="50d195e4-1391-4de8-bc22-f29d32371d5b" name="변경" comment="feat: jpa 쿼리작성">
+      <change afterPath="$PROJECT_DIR$/point-api/src/main/java/com/musinsa/point/dto/response/ErrorResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/point-api/src/main/java/com/musinsa/point/exception/GlobalExceptionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/point-api/src/main/java/com/musinsa/point/repository/PointDebitDetailRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/point-api/src/main/java/com/musinsa/point/repository/PointDebitDetailRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/point-api/src/main/java/com/musinsa/point/service/PointDebitService.java" beforeDir="false" afterPath="$PROJECT_DIR$/point-api/src/main/java/com/musinsa/point/service/PointDebitService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,30 +36,30 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "yechan-93"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;yechan-93&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
-    "url": "https://github.com/yechan93/musinsa-point-api.git",
-    "accountId": "7890f2b5-9895-4c81-bfa7-8f6f752f5ec2"
+    "url": "https://yechan93@github.com/yechan93/musinsa-point-api.git",
+    "accountId": "f7af077c-4011-49ab-8f69-abd3e7400b0e"
   }
 }]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0,
-  "fromUser": false
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0,
+  &quot;fromUser&quot;: false
+}</component>
   <component name="ProjectId" id="3D0xgWm64mZRFKqxq5Vbf0kcUz4" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -74,6 +78,7 @@
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "develop",
     "kotlin-language-version-configured": "true",
+    "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
 }]]></component>
@@ -85,6 +90,23 @@
       <option name="presentableId" value="Default" />
       <updated>1777432900038</updated>
     </task>
+    <task id="LOCAL-00001" summary="feat: jpa 쿼리작성">
+      <option name="closed" value="true" />
+      <created>1777441822603</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1777441822604</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: jpa 쿼리작성">
+      <option name="closed" value="true" />
+      <created>1777441966082</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1777441966082</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -95,11 +117,28 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="develop" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="repository 초기" />
+    <MESSAGE value="feat: jpa 쿼리작성" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: jpa 쿼리작성" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
