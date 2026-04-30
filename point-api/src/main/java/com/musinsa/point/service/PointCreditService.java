@@ -26,12 +26,12 @@ public class PointCreditService {
      * 포인트 적립
      * @param userId    적립 대상 유저
      * @param amount    적립 금액
-     * @param isManual  수기 지급 여부 (true 면 사용 시 우선 차감)
+     * @param manual  수기 지급 여부 (true 면 사용 시 우선 차감)
      * @param expiredAt 만료일 (null 이면 기본 정책값 적용)
      * @return 생성된 creditKey
      */
     @Transactional
-    public String credit(String userId, Long amount, boolean isManual, LocalDate expiredAt) {
+    public String credit(String userId, Long amount, boolean manual, LocalDate expiredAt) {
 
         // 만료일이 없으면 정책 기본값 적용
         LocalDate resolvedExpiredAt = (expiredAt != null) ? expiredAt
@@ -46,7 +46,7 @@ public class PointCreditService {
         // 잔액 유효성 체크
         validateMaxBalance(userId, amount);
 
-        PointCredit credit = PointCredit.create(userId, amount, isManual, resolvedExpiredAt);
+        PointCredit credit = PointCredit.create(userId, amount, manual, resolvedExpiredAt);
         pointCreditRepository.save(credit);
 
         return credit.getCreditKey();

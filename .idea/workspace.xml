@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50d195e4-1391-4de8-bc22-f29d32371d5b" name="변경" comment="feat: jpa 쿼리작성">
-      <change afterPath="$PROJECT_DIR$/point-api/src/main/java/com/musinsa/point/dto/response/ErrorResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/point-api/src/main/java/com/musinsa/point/exception/GlobalExceptionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/point-api/src/main/java/com/musinsa/point/domain/PointCredit.java" beforeDir="false" afterPath="$PROJECT_DIR$/point-api/src/main/java/com/musinsa/point/domain/PointCredit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/point-api/src/main/java/com/musinsa/point/repository/PointCreditRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/point-api/src/main/java/com/musinsa/point/repository/PointCreditRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/point-api/src/main/java/com/musinsa/point/repository/PointDebitDetailRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/point-api/src/main/java/com/musinsa/point/repository/PointDebitDetailRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/point-api/src/main/java/com/musinsa/point/service/PointDebitService.java" beforeDir="false" afterPath="$PROJECT_DIR$/point-api/src/main/java/com/musinsa/point/service/PointDebitService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/point-api/src/main/java/com/musinsa/point/service/PointCreditService.java" beforeDir="false" afterPath="$PROJECT_DIR$/point-api/src/main/java/com/musinsa/point/service/PointCreditService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +79,7 @@
     "git-widget-placeholder": "develop",
     "kotlin-language-version-configured": "true",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+    "settings.editor.selected.configurable": "preferences.updates"
   }
 }]]></component>
   <component name="TaskManager">
@@ -138,7 +138,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="repository 초기" />
     <MESSAGE value="feat: jpa 쿼리작성" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: jpa 쿼리작성" />
+    <MESSAGE value="feat: 예외처리 응답부 추가반영" />
+    <MESSAGE value="feat: 예외처리 응답부 추가반영" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 예외처리 응답부 추가반영" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

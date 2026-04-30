@@ -34,7 +34,7 @@ public interface PointCreditRepository extends JpaRepository<PointCredit, Long> 
         WHERE pc.userId = :userId
           AND pc.status = :status
           AND pc.expiredAt >= CURRENT_DATE
-        ORDER BY pc.isManual DESC, pc.expiredAt ASC, pc.id ASC
+        ORDER BY pc.manual DESC, pc.expiredAt ASC, pc.id ASC
         """)
     List<PointCredit> findDebitTargets(@Param("userId") String userId,
                                        @Param("status") CreditStatus status);

@@ -12,7 +12,7 @@ import java.util.UUID;
 /**
  * 포인트 적립 1건
  * remainAmount 를 기준으로 사용 가능 잔액을 관리하며,
- * isManual 과 expiredAt 으로 사용 우선순위를 결정한다
+ * manual 과 expiredAt 으로 사용 우선순위를 결정한다
  */
 @Getter
 @Entity
@@ -41,7 +41,7 @@ public class PointCredit extends BaseEntity {
 
     // true 면 사용 시 일반 적립보다 우선 차감
     @Column(nullable = false)
-    private boolean isManual;
+    private boolean manual;
 
     @Column(nullable = false)
     private LocalDate expiredAt;
@@ -53,13 +53,13 @@ public class PointCredit extends BaseEntity {
     // Service 에서 새 적립건 생성 시 사용
     // new PointCredit() 대신 이 메서드로만 생성하도록 강제
     public static PointCredit create(String userId, Long amount,
-                                     boolean isManual, LocalDate expiredAt) {
+                                     boolean manual, LocalDate expiredAt) {
         PointCredit credit = new PointCredit();
         credit.creditKey      = UUID.randomUUID().toString();
         credit.userId         = userId;
         credit.originalAmount = amount;
         credit.remainAmount   = amount;     // 처음엔 originalAmount 와 동일
-        credit.isManual       = isManual;
+        credit.manual         = manual;
         credit.expiredAt      = expiredAt;
         credit.status         = CreditStatus.ACTIVE;
         return credit;

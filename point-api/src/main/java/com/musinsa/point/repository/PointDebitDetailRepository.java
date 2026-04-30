@@ -19,7 +19,7 @@ public interface PointDebitDetailRepository extends JpaRepository<PointDebitDeta
         SELECT pdd FROM PointDebitDetail pdd
         JOIN FETCH pdd.pointCredit
         WHERE pdd.pointDebit.id = :pointDebitId
-        ORDER BY pdd.pointCredit.isManual DESC,
+        ORDER BY pdd.pointCredit.manual DESC,
                  pdd.pointCredit.expiredAt ASC,
                  pdd.id ASC
         """)
