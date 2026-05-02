@@ -44,11 +44,6 @@ public class PointDebitService {
         // 사용 금액 검증
         validatePositiveAmount(amount, ErrorCode.INVALID_DEBIT_AMOUNT);
 
-        // 동일 주문번호 중복 사용 방지
-        if (pointDebitRepository.existsByOrderNo(orderNo)) {
-            throw new PointException(ErrorCode.DUPLICATE_ORDER_NO);
-        }
-
         // 잔액 부족 확인
         Long balance = pointCreditRepository
                 .sumRemainAmountByUserIdAndStatus(userId, CreditStatus.ACTIVE);

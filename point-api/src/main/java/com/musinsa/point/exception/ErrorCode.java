@@ -20,7 +20,6 @@ public enum ErrorCode {
     PARTIAL_USED_CREDIT("일부라도 사용된 포인트는 적립 취소할 수 없습니다.", HttpStatus.BAD_REQUEST),
 
     // 사용 관련
-    DUPLICATE_ORDER_NO("이미 포인트가 사용된 주문번호입니다.", HttpStatus.BAD_REQUEST),
     INSUFFICIENT_BALANCE("포인트 잔액이 부족합니다.", HttpStatus.BAD_REQUEST),
     INVALID_DEBIT_AMOUNT("사용 금액은 1원 이상이어야 합니다.", HttpStatus.BAD_REQUEST),
     DEBIT_NOT_FOUND("포인트 사용 내역을 찾을 수 없습니다.", HttpStatus.NOT_FOUND),

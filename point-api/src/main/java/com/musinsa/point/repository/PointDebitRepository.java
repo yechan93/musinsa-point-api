@@ -12,6 +12,4 @@ public interface PointDebitRepository extends JpaRepository<PointDebit, Long> {
 
     Optional<PointDebit> findByDebitKey(String debitKey);
 
-    // 동일 주문번호 중복 사용 방지
-    boolean existsByOrderNo(String orderNo);
 }
