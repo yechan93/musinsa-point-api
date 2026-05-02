@@ -27,7 +27,6 @@ public class PointDebitService {
     private final PointDebitRepository pointDebitRepository;
     private final PointDebitDetailRepository pointDebitDetailRepository;
     private final PointCreditRepository pointCreditRepository;
-    private final PointCreditService pointCreditService;
     private final PointPolicyConfig policyConfig;
 
     /**
@@ -51,7 +50,8 @@ public class PointDebitService {
         }
 
         // 잔액 부족 확인
-        Long balance = pointCreditService.getBalance(userId);
+        Long balance = pointCreditRepository
+                .sumRemainAmountByUserIdAndStatus(userId, CreditStatus.ACTIVE);
         if (balance < amount) {
             throw new PointException(ErrorCode.INSUFFICIENT_BALANCE);
         }
@@ -123,7 +123,7 @@ public class PointDebitService {
                 // 복구 개념의 신규 적립은 최대 포인트 보유 한도 체크 예외로 가정함
                 LocalDate newExpiredAt = LocalDate.now().plusDays(policyConfig.getDefaultExpireDays());
                 PointCredit newCredit = PointCredit.create(
-                        debit.getUserId(), restoreAmount, false, newExpiredAt);
+                        debit.getUserId(), restoreAmount, credit.isManual(), newExpiredAt);
                 pointCreditRepository.save(newCredit);
             } else {
                 // 미만료 적립건 → 잔액 복구
