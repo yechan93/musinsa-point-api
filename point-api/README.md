@@ -36,26 +36,26 @@
 ```bash
 ./gradlew bootRun
 
-### 1. 포인트 적립
+1. 포인트 적립
 curl -X POST http://localhost:8080/api/v1/points/user1/credit \
 -H "Content-Type: application/json" \
 -d '{"amount": 10000, "manual": false}'
 
-### 2. 잔액 조회
+2. 잔액 조회
 curl http://localhost:8080/api/v1/points/user1/balance
 
-### 3. 포인트 사용
+3. 포인트 사용
 curl -X POST http://localhost:8080/api/v1/points/user1/debit \
 -H "Content-Type: application/json" \
 -d '{"orderNo": "ORDER-001", "amount": 5000}'
 
 # 위 적립 응답의 creditKey, 사용 응답의 debitKey를 각각 대입
-### 4. 사용취소
+4. 사용취소
 curl -X POST http://localhost:8080/api/v1/points/debit/{debitKey}/cancel \
 -H "Content-Type: application/json" \
 -d '{"cancelAmount": 3000}'
 
-### 5. 적립취소
+5. 적립취소
 curl -X DELETE http://localhost:8080/api/v1/points/credit/{creditKey}
 ```
 ### H2 콘솔 (데이터 직접 확인)
